@@ -28,15 +28,22 @@ export class CoursesComponent implements OnInit {
   }
 
   findAll(): void {
-    this.studentService.findAll().subscribe(students => {
-      this.studentList = students;
-    });
+    try {
+      this.studentService.findAll().subscribe(students => {
+        this.studentList = students;});
+    } catch(e){
+      console.log(e);
+    }
   }
 
   findByCode(): void {
-    this.studentService.findById(this.studentCode).subscribe(student => {
-      this.studentSelected = student;
-    })
+    try {
+      this.studentService.findById(this.studentCode).subscribe(student => {
+        this.studentSelected = student;})
+    } catch(e){
+      console.log(e);
+    }
+
   }
 
 }
