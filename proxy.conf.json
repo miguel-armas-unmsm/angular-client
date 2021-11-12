@@ -1,0 +1,7 @@
+{
+    "/demo/business/v1/*": {
+        "target": "http://34.69.39.86",
+        "secure": false,
+        "logLevel": "debug"
+    }
+} 
