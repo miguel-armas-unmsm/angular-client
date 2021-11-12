@@ -8,8 +8,7 @@ import { Student } from '../models/student';
 })
 export class StudentService extends CommonService<Student> {
 
-  override baseUrl = '/demo/business/v1/students';
-
+  override baseUrl = 'http://34.66.47.189/demo/business/v1/students';
   constructor(http: HttpClient) {
     super(http);
    }
